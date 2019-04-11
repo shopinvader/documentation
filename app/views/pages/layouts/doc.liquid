@@ -1,0 +1,59 @@
+---
+handle: doc
+title: Document layout
+is_layout: false
+---
+{% extends 'layouts/default' %}
+{% block "body/content" %}
+<div class="container-fluid bg-light pt-5 pb-5 ">
+	<div class="row justify-content-center">
+		<div class="col-12  col-xl-11 h-100 4  pt-4 pb-4">
+		  <div class="row">
+		    <div class="col-12 col-lg-4 col-xl-3 ">
+		    	<div class="p-4 bg-white d-flex d-lg-none justify-content-between">
+		    		<div>
+		    			<b>{{'doc_title' | translate }}</b>
+		    		</div>
+		    		<div>
+		    			<a href="#doc-menu" data-toggle="collapse" class="btn btn-link text-dark">
+		    				<i class="fas fa-bars"></i>
+		    			</a>
+		    		</div>
+		    	</div>
+		      <div class="p-4 bg-white collapse d-lg-block" id="doc-menu">
+		      	<ul class="list-group list-group-flush">
+			        {% for category in contents.doc_categories %}
+			          <li  class="list-group-item">
+			            <b class="text-dark text-uppercase">{{category.name}}</b>
+			            <ul class="list-group pl-3">
+			            	{% for doc_page in category.pages %}
+			            		{% if page.slug != doc_page._slug %}
+			            			{% assign css_item = 'text-dark' %}
+			            		{% endif %}
+			            		<li class="list-group-item border-0 p-1">
+			            			<a href="{% path_to doc_page %}" class="{{css_item}}">
+			            				{{doc_page.name}}
+			            			</a>
+			            		</li>
+			            	{% endfor %}
+			            </ul>
+			          </li>
+			        {% endfor %}
+			      </ul>
+		      </div>
+		    </div>
+		    <div class="col-12 col-lg-8 col-xl-9">
+		    	<div class="p-4 bg-white">
+			    	{% block "doc" %}
+			    		<h1 class="pb-3 d-none d-lg-block text-uppercase text-dark font-weight-bold">{{'doc_title' | translate }}</h1>
+			    	{% endblock%}
+		    	</div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</div>
+{% endblock%}
+{% block 'javascripts', short_name: true %}
+	{{ 'document-menu.js' | javascript_tag }}
+{% endblock %}

@@ -1,0 +1,21 @@
+---
+title: Default layout
+is_layout: false
+---
+{% extends 'layouts/base' %}
+{% block 'body' %}
+  <header>
+    {% block 'header' %}
+      {% global_section 'header', id:'page_header',  placement: 'top'%}
+    {% endblock %}
+  </header>
+  <div class="page shadow">
+    <main>     
+      {% block content %}
+      {% endblock %}
+    </main>
+    {% block footer %}
+      {% global_section 'footer',   id:'page_footer',  placement: 'bottom'%}
+    {% endblock %}
+  </div>
+{% endblock %}

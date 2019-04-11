@@ -1,0 +1,5 @@
+.locomotive-section[data-locomotive-section-type="header"] {
+  .navbar {
+    background: linear-gradient(lighten(theme-color('primary'), 5), theme-color('primary'));
+  }
+}

@@ -1,0 +1,29 @@
+- 'System Workflow':
+    _slug: 'system-workflow'
+    name: System Workflow
+    category: introduction
+    content: "<%= inject('doc_pages/en/system-workflow.md') %>"
+
+- 'Components':
+    _slug: 'components'
+    name: Components
+    category: introduction
+    content: "<%= inject('doc_pages/en/components.md') %>"
+
+- 'About users':
+    _slug: 'about-users'
+    name: About users
+    category: introduction
+    content: "<%= inject('doc_pages/en/about-users.md') %>"
+
+- 'Odoo installation':
+    _slug: 'about-users'
+    name: About users
+    category: introduction
+    content: "<%= inject('doc_pages/en/about-users.md') %>"
+    
+- 'Odoo installation':
+    _slug: 'about-users'
+    name: About users
+    category: introduction
+    content: "<%= inject('doc_pages/en/about-users.md') %>"

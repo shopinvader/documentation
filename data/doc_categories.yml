@@ -1,0 +1,12 @@
+- "Introduction":
+    _slug: "introduction"
+    name: "Introduction"
+- "Installation & Configuration":
+    _slug: "Installation"
+    name: "Installation & Configuration"
+- "Template components":
+    _slug: "template-components"
+    name: "Template components"
+- "Practical examples":
+    _slug: "practical-examples"
+    name: "Practical examples"

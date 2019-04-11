@@ -1,0 +1,81 @@
+---
+{
+  "name": "Header",
+  "class": "",
+  "icon": "header",
+  "keep_name": true,
+  "keep_icon": true,
+  "id": "header",
+  "settings": [
+    {
+      "label": "Fixed header",
+      "id": "fixed_position",
+      "type": "checkbox"
+    },
+    {
+      "label": "Brand Logo",
+      "id": "brand_logo",
+      "type": "image_picker"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Menu entry",
+      "type": "menu_item",
+      "settings": [
+        {
+          "label": "Content",
+          "id": "content",
+          "type": "text"
+        },
+        {
+          "label": "Page",
+          "id": "page_url",
+          "type": "url_picker"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "settings": {
+      "brand_logo": "/images/logo-inline-negative.png"
+    },
+    "blocks": [
+      {
+        "type": "menu_item",
+        "settings" : {
+          "content": "Live Demo",
+          "page_url": "page"
+        }
+      },
+      {
+        "type": "menu_item",
+        "settings" : {
+          "content": "Documentation",
+          "page_url": "page"
+        }
+      }
+    ]
+  }
+}
+---
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <div class="row pt-2 pb-2 align-items-center w-100">
+      <div class="col-auto d-flex">
+        <a class="navbar-brand" href="#">
+          <img src="{{section.settings.brand_logo}}" alt="{{site.metafields.name}}" class="img-fluid">
+        </a>
+        <ul class="navbar-nav lead">
+          {% for item in section.blocks %}
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{{ item.settings.page_url }}">
+                {{ item.settings.content }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

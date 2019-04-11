@@ -1,0 +1,117 @@
+---
+handle: base
+title: Base layout
+is_layout: false
+---
+{% if locale != default_locale %}
+  {% assign url_base ="/" | append: locale %}
+{% endif%}
+
+
+{% assign url_base =url_base | prepend: base_url | append:"/"%}
+<!DOCTYPE html>
+<html lang="{{locale}}">
+  <head>
+    <link rel="manifest" href="{% path_to manifest_json%}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17a2b8">
+    <meta name="generator" content="ShopInvader" />
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "{{site.name}}",
+      "url": "{{base_url}}",
+      "logo":  "{{site.metafields.theme.logo}}"
+    }
+    </script>
+
+    {% block 'header_meta' %}
+      <link rel="canonical" href="{{base_url}}{% path_to page%}" />
+      {% seo %}
+      {% for locale_code in locales %}
+      <link rel="alternate" href="{% path_to page, locale: locale_code %}" hreflang="{{locale_code}}"/>
+      {% endfor %}
+    {% endblock %}
+
+    {% block 'css' %}
+    {% endblock %}
+    {% block 'javascripts_header' %}
+     
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    {{ 'application.css' | stylesheet_tag }}
+    <link rel="shortcut icon" href="{{ 'favicon.png' | theme_image_url }}">
+
+    {% if live_editing == true and site.metafields.theme.debug_section == true%}
+      {% assign css_body = 'body-section-debug' %}
+      {{ 'section-debug.js' | javascript_tag }}
+      {{ 'sections/debug.css' | stylesheet_tag }}
+    {% endif %}
+
+  </head>
+  <body class="{{css_body}}">
+    <style media="screen">
+      body {
+        font-family: Comfortaa;
+        background-color: {{site.metafields.theme.body_bg_color}};
+      }
+      body .page {
+        max-width: {{site.metafields.theme.page_max_width}};
+        {% if site.metafields.theme.page_border == false %}
+          box-shadow: unset !important;
+          border: none;
+        {% endif %}
+      }
+      .header .block-row {
+        {% if site.metafields.theme.page_border == false %}
+          box-shadow: unset !important;
+          border: none;
+        {% endif %}
+      }
+      .header .block-row.container {
+        max-width: {{site.metafields.theme.page_max_width}};
+        
+      }
+      .locomotive-section[data-locomotive-section-type="header"] .header .header-block-navigation .list-inline .list-inline-item .list-inline-dropdown-content {
+        max-width: {{site.metafields.theme.page_max_width}};
+      }
+    </style>
+    <div class="main-loader d-none">
+      <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+      </svg>
+    </div>
+    {% block 'body' %}
+    {% endblock %}
+    
+    {{ 'popper.min.js' | javascript_tag }}
+    {{ 'jquery.min.js' | javascript_tag }}
+    {{ 'js-cookie' | javascript_tag }}
+    {{ 'bootstrap4.min.js' | javascript_tag }}
+    {{ 'application.js' | javascript_tag }}
+
+    {% block 'javascripts', short_name: true %}
+    {% endblock %}
+    {% global_section 'cookies_manager',  placement: 'bottom' %}
+
+    <script>
+      var cb = function() {
+        add_stylesheet({{ 'themify-icons.css' | stylesheet_url | json }});
+      };
+      function add_stylesheet(filename) {
+        var l = document.createElement('link'); l.rel = 'stylesheet';
+        l.href = filename;
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      }
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+      
+    </script>
+  </body>
+</html>

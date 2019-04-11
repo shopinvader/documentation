@@ -1,0 +1,71 @@
+theme:
+  label: Theme
+  icon: Theme options
+  fields:
+    debug_section:
+      type: boolean
+    page_max_width:
+      type: select
+      select_options:
+        - 1020px
+        - 1200px
+        - 1600px
+        - 1920px
+        - 100%
+    page_border:
+      type: boolean
+    body_bg_color:
+      label: Background color
+      type: color
+    logo:
+      hint: "Displayed at the top right corner, right before the name of the site."
+      type: image
+    app_icon_sm:
+      hint: "Icon for mobile app Small format (192x192)"
+      type: image
+    app_icon_md:
+      hint: "Icon for mobile app Medium format (256x256)"
+      type: image
+    app_icon_lg:
+      hint: "Icon for mobile app Large format (384x384)"
+      type: image
+    app_icon_xl:
+      hint: "Icon for mobile app Extra large format (512x512)"
+      type: image
+    noimage:
+      hint: Default placeholder image (categories, products...)
+      type: image
+
+erp:
+  label: Odoo ERP Integration
+  fields:
+    api_key:
+      type: string
+    api_url:
+      type: string
+    default_role:
+      type: string
+smtp:
+  label: Email Parameters
+  fields:
+    sender:
+      type: string
+    address:
+      type: string
+    port:
+      type: integer
+    user_name:
+      type: string
+    password:
+      type: string
+    authentication:
+      type: string
+    enable_starttls_auto:
+      type: boolean
+_store:
+  label: Store
+  fields:
+    available_countries:
+      type: string
+    all_filters:
+      type: string
