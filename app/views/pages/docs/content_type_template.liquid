@@ -23,6 +23,15 @@ content_type: doc_pages
 		  <div class="documentation-content pt-2">
 		  	{{doc_page.content | markdown }}
 		  </div>
+		  <div class="border-top pt-2 pb-2 d-flex justify-content-between">
+
+		  	<a href="{% path_to doc_page.category %}">
+		  		{{doc_page.category.name}}
+		  	</a>
+		  	<a href="{% path_to doc_page.next %}">
+		  		{{doc_page.next.name}} <i class="fa fa-a,g"></i>
+		  	</a>
+		  </div>
 		</div>
 		<div class="col-12 col-xl-3 border-left d-none d-xl-block ">
 			<b>{{'doc_menu' | translate}}</b>
@@ -30,5 +39,7 @@ content_type: doc_pages
 		  	
 		  </div>
 		</div>
+
 	</div>
+
 {% endblock%}

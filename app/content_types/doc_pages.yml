@@ -45,7 +45,7 @@ fields:
 - content:
     label: content
     type: text
-    text_formatting: markdown
+    text_formatting: raw
     required: false
     localized: true
 - category:

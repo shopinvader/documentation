@@ -1,29 +1,83 @@
-- 'System Workflow':
-    _slug: 'system-workflow'
-    name: System Workflow
+- 'Why Shopinvader':
+    _slug: 'why-shopinvader'
+    name: Why Shopinvader
     category: introduction
-    content: "<%= inject('doc_pages/en/system-workflow.md') %>"
+    content: "<%= inject('doc_pages/en/why-shopinvader.md') %>"
 
-- 'Components':
-    _slug: 'components'
-    name: Components
+- 'Architecture':
+    _slug: 'architecture'
+    name: Architecture
     category: introduction
-    content: "<%= inject('doc_pages/en/components.md') %>"
+    content: "<%= inject('doc_pages/en/architecture.md') %>"
 
-- 'About users':
-    _slug: 'about-users'
-    name: About users
-    category: introduction
-    content: "<%= inject('doc_pages/en/about-users.md') %>"
+- 'Installation':
+    _slug: 'installation'
+    name: Installation
+    category: installation
+    content: "<%= inject('doc_pages/en/installation.md') %>"
 
-- 'Odoo installation':
-    _slug: 'about-users'
-    name: About users
-    category: introduction
-    content: "<%= inject('doc_pages/en/about-users.md') %>"
-    
-- 'Odoo installation':
-    _slug: 'about-users'
-    name: About users
-    category: introduction
-    content: "<%= inject('doc_pages/en/about-users.md') %>"
+- 'First step':
+    _slug: 'settings'
+    name: Configuration
+    category: installation
+    content: "<%= inject('doc_pages/en/first-steps.md') %>"
+
+- 'Get the template':
+    _slug: 'get-template'
+    name: Get the template
+    category: template
+    content: "<%= inject('doc_pages/en/get-template.md') %>"
+
+- 'File structure':
+    _slug: 'file-structure'
+    name: File structure
+    category: template
+    content: "<%= inject('doc_pages/en/file-structure.md') %>"
+
+- 'Products':
+    _slug: 'products'
+    name: Products
+    category: api
+    content: "<%= inject('doc_pages/en/products.md') %>"
+
+- 'Categories':
+    _slug: 'categories'
+    name: Categories
+    category: api
+    content: "<%= inject('doc_pages/en/categories.md') %>"
+
+- 'Sales':
+    _slug: 'sales'
+    name: Sales
+    category: api
+    content: "<%= inject('doc_pages/en/sales.md') %>"
+
+- 'Customers':
+    _slug: 'customers'
+    name: Customers
+    category: api
+    content: "<%= inject('doc_pages/en/customers.md') %>"
+
+- 'Notifications':
+    _slug: 'notifications'
+    name: Notifications
+    category: api
+    content: "<%= inject('doc_pages/en/notifications.md') %>"
+
+- 'Shopping cart':
+    _slug: 'shopping-cart'
+    name: Shopping cart
+    category: api
+    content: "<%= inject('doc_pages/en/cart.md') %>"
+
+- 'Swagger':
+    _slug: 'swagger'
+    name: Swagger
+    category: api
+    content: "<%= inject('doc_pages/en/cart.md') %>"
+
+- 'Special tags/attributes':
+    _slug: 'special-tag'
+    name: Special tags/attributes
+    category: template
+    content: "<%= inject('doc_pages/en/special-tag.md') %>"

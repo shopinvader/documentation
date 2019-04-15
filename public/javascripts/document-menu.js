@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	$container = $('.documentation-content');
-	$('.doc-menu').append($('<ul>').addClass('list-group pl-2'));
-	$menu = $('.doc-menu ul');
+	$('.doc-menu').append($('<div>').addClass('pl-2'));
+	$menu = $('.doc-menu');
 	console.log($menu);
 	
 	if($container.length > 0) {
@@ -12,8 +12,7 @@ $(document).ready(function () {
 			$title = $(title);
 			$title.attr('id', 'title-'+i);
 			var $link = $('<a>').html($title.html()).addClass('text-dark').attr('href', '#title-'+i);
-			var title_level = $title[0].tagName.substring(1);
-			$menu_item = $('<li>').addClass('list-group-item border-0 pt-1 pb-1').addClass('pl-'+(title_level*2));
+			$menu_item = $('<div>').addClass('title-'+($title[0].tagName.substring(1)));
 			$menu_item.append($link);
 			$menu.append($menu_item);
 		});

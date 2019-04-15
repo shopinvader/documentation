@@ -1,12 +1,12 @@
 $icon-font-path: "../fonts/bootstrap/" !default;
 @import 'components/custom';
-@import 'components/documentation_content';
+
 
 @import 'bootstrap4/bootstrap';
 /*Section*/
 @import 'sections/cookies_manager';
 @import 'sections/header';
-
+@import 'components/documentation_content';
 //@import 'sections/section_debug';
 
 html {

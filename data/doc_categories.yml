@@ -1,12 +1,17 @@
 - "Introduction":
     _slug: "introduction"
     name: "Introduction"
-- "Installation & Configuration":
-    _slug: "Installation"
+- "Get started":
+    _slug: "installation"
     name: "Installation & Configuration"
-- "Template components":
-    _slug: "template-components"
-    name: "Template components"
-- "Practical examples":
-    _slug: "practical-examples"
-    name: "Practical examples"
+- "Template":
+    _slug: "template"
+    name: "Template"
+
+- "API References":
+    _slug: "api"
+    name: "API References"
+
+- "Backend Configuration":
+    _slug: "configuration"
+    name: "Configuration"
