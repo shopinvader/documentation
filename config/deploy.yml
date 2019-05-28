@@ -1,0 +1,5 @@
+production:
+  host: https://doc.shopinvader.com
+  handle: celestial-crater-7647
+  email:  "<%= ENV['API_EMAIL'] %>"
+  api_key: "<%= ENV['API_KEY'] %>"

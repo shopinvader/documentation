@@ -1,0 +1,28 @@
+
+name: "Shopinvader Doc"
+locales: [en]
+
+seo_title:
+meta_keywords:
+meta_description:
+
+metafields_ui:
+  label:
+    en: Store settings
+  icon: window-maximize
+  hint: "Store main parameters"
+metafields:
+  theme:
+    debug_section:
+    page_max_width:
+    body_bg_color:
+    page_border:
+    logo:
+    app_icon:
+    cart_icon:
+    user_icon:
+    noimage:
+  google:
+    analytics_id:
+    recaptcha_site_key:
+    recaptcha_secret:

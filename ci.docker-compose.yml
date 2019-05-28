@@ -1,7 +1,0 @@
-services:
-  wagon:
-    image: quay.io/akretion/docky-ruby:latest
-    volumes:
-      - .:/workspace
-      - ./bundle:/usr/local/bundle
-version: '3'
