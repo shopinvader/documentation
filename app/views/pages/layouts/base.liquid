@@ -41,6 +41,8 @@ is_layout: false
     {% block 'javascripts_header' %}
      
     {% endblock %}
+    {{'highlight.pack.js' | javascript_tag}}
+    {{'atom-one-dark.css' | stylesheet_tag}}
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat:300" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     {{ 'application.css' | stylesheet_tag }}

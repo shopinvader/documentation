@@ -18,3 +18,28 @@ $(document).ready(function () {
 		});
 	}
 });
+
+$(document).ready(function () {
+	$('.documentation-content a').each(function(i, element){
+		link_url = new URL($(element).attr('href'));
+		page_url = new URL(document.location);
+		console.log(link_url);
+		if(link_url.host != page_url.host) {
+			$(element).attr('target', '_blank');
+			$(element).addClass('external');
+			//$(element).html($(element).html()+ '  <span class="small"><i class="fas fa-external-link-alt "></i></span>');
+		}
+	});
+	$('code').each(function(i, element){
+		var lines = $(element).html().split('\n');
+		console.log(lines.length, lines);
+		if(lines.length > 1){
+			$(this).addClass('multiline');
+			
+		}
+		else {
+			$(this).addClass('inline');
+		}
+		hljs.highlightBlock($(element)[0]);
+	});
+});	
