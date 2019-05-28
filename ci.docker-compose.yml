@@ -1,6 +1,9 @@
 services:
   wagon:
     image: quay.io/akretion/docky-ruby:latest
+    environment:
+      - API_KEY=${API_KEY}
+      - API_EMAIL=${API_EMAIL}
     volumes:
       - .:/workspace
       - ./bundle:/usr/local/bundle

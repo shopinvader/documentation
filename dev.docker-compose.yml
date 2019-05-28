@@ -1,0 +1,17 @@
+networks:
+  default:
+    external:
+      name: dy
+services:
+  wagon:
+    image: quay.io/akretion/docky-ruby:latest
+    environment:
+      - API_KEY=31a8c05eca1065865c46d76bed22d8cd8c2809c4
+      - API_EMAIL=shopinvader-bot+doc@akretion.com.br
+    volumes:
+      - .:/workspace
+      - $HOME/.docky/shared/bundle:/usr/local/bundle
+    labels:
+      traefik.wagon.frontend.rule: "Host:doc.dy"
+      traefik.wagon.port: 3333
+version: '3'
