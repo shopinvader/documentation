@@ -38,13 +38,15 @@
     _slug: 'products'
     name: Products
     category: api
-    content: "<%= inject('doc_pages/en/products.md') %>"
+    content: |
+<%= inject('doc_pages/en/products.md') %>
 
 - 'Categories':
     _slug: 'categories'
     name: Categories
     category: api
-    content: "<%= inject('doc_pages/en/categories.md') %>"
+    content:
+<%= inject('doc_pages/en/categories.md') %>
 
 - 'Sales':
     _slug: 'sales'

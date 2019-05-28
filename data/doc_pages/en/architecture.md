@@ -29,6 +29,7 @@ Wagon is a command line tool that let's you develop for Locomotive right on your
 It can do a Local render of the website and can manage the deployment of the template to locomotive production server.
 Wagon is the server side of the architecture.
 
+
 #### Locomotive-shopinvader-gem
 
 It’s an addon of locomotive which take care of all the communication between locomotiveCMS and Odoo.
