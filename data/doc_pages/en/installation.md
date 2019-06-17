@@ -1,7 +1,7 @@
 ## Requirement
 
 
-Before starting, you need to make sure your system has docker and docker compose. 
+Before starting, you need to make sure your system has docker and docker compose.
 
 
 If it is not the case, please refer to :
@@ -16,13 +16,10 @@ If it is not the case, please refer to :
 ## Installation
 
 
-### Docker images
-
-
 Clone the shopinvader-getting-started repository
 
 
-```bash
+```
 git clone https://github.com/akretion/shopinvader-getting-started.git
 ```
 
@@ -30,12 +27,12 @@ git clone https://github.com/akretion/shopinvader-getting-started.git
 Start docker:
 
 
-```bash
+```
 cd shopinvader-getting-started
 ```
 
 
-```bash
+```
 docker-compose up
 ```
 
@@ -57,35 +54,32 @@ Now we have running Odoo and Shopinvader instances.
 		- user : demo@shopinvader.com
 		- password: akretion
 
--  **Odoo** : [http://localhost:8069](http://localhost:8069) user: admin - password : admin 
+- **Odoo**: [http://localhost:8069](http://localhost:8069) user: admin - password : admin
 
 
 ### Search Engine
 
+For this demo you will use elasticsearch as search engine.
+We are also compatible with Algolia, but it's not the purpose of this quick setup.
 
 #### Elasticsearch
 
-Coming soon...
+With that project you already have a docker container running.
+What we need it to synchronise the odoo data into you elastic index.
 
 
-#### Algolia
-
-Algolia [www.algolia.com](https://www.algolia.com/) is used to the search and for storing a cache of your products and categories. 
-An alternative based on Elastic will be started soon.
-
- - First create an Algolia account: [www.algolia.com](https://www.algolia.com/).
- - Then get your application ID and admin key in the tab « api key »
-
-The API Key and application ID are necessary for the configuration step below.
+TODO
 
 
 ### Template
+
+TODO
 
 In order to have a starting point, you can use the demo template, this is the one used to power up the demo Shopinvader website.
 
 
 ```
-git clone https://github.com.akretion/shopinvader-template 
+git clone https://github.com.akretion/shopinvader-template
 ```
 
 
