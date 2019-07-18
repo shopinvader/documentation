@@ -28,9 +28,24 @@ Attributes of store.categories entry.
 
 **Example :**
 
+
 Display categories list.
 
 ```
+<ul>
+	{% for category in store.categories %}
+	  <li>
+	    <a href='{% path_to category %}'>
+	      {{category.name}}
+	    </a>
+	  </li>
+	{% endfor %}
+</ul>
+```
+
+
+```
+
 <ul>
 {% for category in store.categories %}
   <li>
