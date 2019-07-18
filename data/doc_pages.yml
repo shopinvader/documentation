@@ -16,11 +16,11 @@
     category: installation
     content: "<%= inject('doc_pages/en/installation.md') %>"
 
-- 'First step':
-    _slug: 'settings'
-    name: Configuration
+- 'Deploy new website':
+    _slug: 'deploy-website'
+    name: Deploy new website
     category: installation
-    content: "<%= inject('doc_pages/en/first-steps.md') %>"
+    content: "<%= inject('doc_pages/en/deploy-website.md') %>"
 
 - 'Get the template':
     _slug: 'get-template'

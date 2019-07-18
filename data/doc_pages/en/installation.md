@@ -79,11 +79,11 @@ In order to have a starting point, you can use the demo template, this is the on
 
 
 ```
-git clone https://github.com.akretion/shopinvader-template
+git clone https://github.com/shopinvader/shopinvader-template
 ```
 
 
-Alternatively, if you don’t want to manage your code using git, download the code from [https://github.com/akretion/shopinvader-template/releases](https://github.com/akretion/shopinvader-template/releases).
+Alternatively, if you don’t want to manage your code using git, download the code from [https://github.com/shopinvader/shopinvader-template/releases](https://github.com/shopinvader/shopinvader-template/releases).
 
 Go on [http://localhost:3000](http://localhost:3000) to render the template.
 
