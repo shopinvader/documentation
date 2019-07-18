@@ -30,6 +30,10 @@
 
 		&.hljs {
 			display: inline-block;
+			&.multiline {
+				display: block;
+				padding: 1rem;
+			}
 			&.inline {
 				padding: 0;
 				&:first-child:last-child {
@@ -82,8 +86,14 @@
 		}
 	}
 }
+.main-menu {
+	position: fixed;
+	//border: 1px solid $border-bottom;
+	width: 20%;
+}
 
 .doc-menu {
+
 	& > div {
 		padding-top: .2rem;
 		padding-bottom: .2rem;

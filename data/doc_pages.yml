@@ -40,6 +40,12 @@
     category: api
     content: "<%= inject('doc_pages/en/products.md') %>"
 
+- 'Cart':
+    _slug: 'cart'
+    name: cart
+    category: api
+    content: "<%= inject('doc_pages/en/cart.md') %>"
+
 - 'Categories':
     _slug: 'categories'
     name: Categories
