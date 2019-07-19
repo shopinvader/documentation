@@ -69,7 +69,7 @@ Invoicing customer address, selected carrier and shipping cost.
 ### Lines
 
 This attribute is a collection of cart lines. 
-Line object have to nested attributes :
+Line object have two nested attributes :
 
 | Name | Type | Description |
 |--------|--------|-------------|
