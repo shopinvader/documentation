@@ -56,7 +56,7 @@ Shipping customer address, selected carrier and shipping cost.
 
 > Make an API request to cart/get_delivery_methods to get available carrier list according to delivery area.
 >
-> **Selected_carrier** and **amount are** set only after call cart/apply_delivery_method API method
+> **Selected_carrier** and **amount** are set only after call cart/apply_delivery_method API method
 
 ### Invoicing
 
