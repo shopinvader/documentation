@@ -104,7 +104,7 @@ Payment cart attribute.
 ### [POST] cart/update
 
 Update cart data. This method is used to change shipping or invoicing address, add note, set a new cart step.
-cart step is used to get cart feedback for marchant cart analysis. It's also used to transform a cart to an order after the checkout.
+cart step is used to get cart feedback for marchant cart analysis. It's also used to transform a cart into an order after the checkout.
 
 #### Options
 
@@ -120,9 +120,9 @@ invoicing.address.id and shipping.address.id are not required values.
 #### Example
 
 Cart update via simple HTML form. 
-This example is a form to set a shipping address in cart. 
-Set a shipping address is necessary to make API call on `cart/get_delivery_methods` to get carrier list. 
-`invader_success_url` and `invader_error_url` params are used for HTTP redirection after submition according to the response state (valid or error).
+This example is a form to set a shipping address in the cart. 
+Setting a shipping address is necessary to make API calls on `cart/get_delivery_methods` to get the carrier list. 
+`invader_success_url` and `invader_error_url` parameters are used for HTTP redirection after submission according to the response state (valid or error).
 
     <form method="post" action="/invader/cart/update">
       <input type="hidden" name="invader_success_url" value="/my-next-step" />
@@ -138,12 +138,12 @@ Set a shipping address is necessary to make API call on `cart/get_delivery_metho
       <input type="submit" name="submit">
     </form>
 
-_To see how to call API method form HTML From See [Call API from HTML Form](./docs/api-call-in-form)._
+_To see how to call API method from a HTML form See [Call API from HTML Form](./docs/api-call-in-form)._
 
 
 ### [POST] Method cart/add_item 
 
-Add product to cart. This method create a new line in cart and refresh `store.cart.lines` variable.
+Add product to cart. This method creates a new line in the cart and refreshes the `store.cart.lines` variable.
 
 #### Options
 
@@ -154,8 +154,8 @@ Add product to cart. This method create a new line in cart and refresh `store.ca
 
 #### Example
 
-Add new item in cart via simple HTML form. 
-This form add 10 product with ObjectID "123456" in the cart.
+Add a new item in the cart via a simple HTML form. 
+This form adds 10 products with ObjectID "123456" in the cart.
 
     <form method="post" action="/invader/cart/add_item">
       <input type="hidden" name="invader_success_url" value="/my-cart" />
@@ -165,11 +165,11 @@ This form add 10 product with ObjectID "123456" in the cart.
       <input type="submit" name="submit">
     </form>
 
-_To see how to call API method form HTML From See [Call API from HTML Form](./docs/api-call-in-form)._
+_To see how to call API method from a HTML form See [Call API from HTML Form](./docs/api-call-in-form)._
 
 ### [POST] Method cart/update_item
 
-Update cart line quantity.
+Update a cart line quantity.
 
 #### Options
 
@@ -180,8 +180,8 @@ Update cart line quantity.
 
 #### Example
 
-Add new item in cart via simple HTML form. 
-This form update line #1 to set quantity 8.
+Add a new item in the cart via a simple HTML form. 
+This form updates line #1 to set quantity = 8.
 
 
     <form method="post" action="/invader/cart/update_item">
@@ -192,11 +192,11 @@ This form update line #1 to set quantity 8.
       <input type="submit" name="submit">
     </form>
 
-_To see how to call API method form HTML From See [Call API from HTML Form](./docs/api-call-in-form)._
+_To see how to call API method from a HTML form See [Call API from HTML Form](./docs/api-call-in-form)._
 
 ### [GET] Method cart/get_delivery_methods
 
-Get the list of all delivery method available according to cart data (shipping area).
+Get the list of all delivery methods available according to cart data (shipping area).
 
 #### Example
 
@@ -216,7 +216,7 @@ _To see how to get data from  API see [ERP tag on Special tag ](./docs/special-t
 
 ### [POST] Method cart/apply_delivery_method
 
-Set selected carrier on cart. This method causes shipping cost calculation depends on carrier, cart content and shipping area.
+Set selected carrier on cart. This method causes shipping cost calculation depending on carrier, cart content and shipping area.
 Get carrier list with method cart/get_delivery_methods
 
 #### Options
@@ -242,6 +242,6 @@ Form to set carrier on cart.
       <input type="submit" name="submit">
     </form>
 
-_To see how to call API method form HTML From See [Call API from HTML Form](./docs/api-call-in-form)._
+_To see how to call API method from a HTML form See [Call API from HTML Form](./docs/api-call-in-form)._
 
 
