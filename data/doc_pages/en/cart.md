@@ -4,6 +4,7 @@ To avoid performance problems, cart data are cached, each cart updating (add new
 
 Each cart update recalculate grand total, subtotal, shipping cost and VAT amount automatically.
 
+
 ## Attributes
 
 
@@ -24,6 +25,7 @@ Attributes of store.cart object.
 | shipping  | Objects | Shipping address, see Shipping doc
 | state  | String | ERP sale order status
 | step  | Objects | Cart Step list, see Checkout step process doc
+
 
 ### Amout
 
@@ -58,6 +60,7 @@ Shipping customer address, selected carrier and shipping cost.
 >
 > **Selected_carrier** and **amount** are set only after call cart/apply_delivery_method API method
 
+
 ### Invoicing
 
 Invoicing customer address, selected carrier and shipping cost.
@@ -65,6 +68,7 @@ Invoicing customer address, selected carrier and shipping cost.
 | Name | Type | Description |
 |--------|--------|-------------|
 | address | Objects | Customer invoicing address |
+
 
 ### Lines
 
@@ -117,6 +121,7 @@ cart step is used to get cart feedback for marchant cart analysis. It's also use
 
 invoicing.address.id and shipping.address.id are not required values.
 
+
 #### Example
 
 Cart update via simple HTML form. 
@@ -138,7 +143,7 @@ Setting a shipping address is necessary to make API calls on `cart/get_delivery_
       <input type="submit" name="submit">
     </form>
 
-_To see how to call API method from a HTML form See [Call API from HTML Form](./docs/api-call-in-form)._
+_To see how to call API method from a HTML form See [Call API from HTML Form](/docs/api-introduction)._
 
 
 ### [POST] Method cart/add_item 
@@ -165,11 +170,13 @@ This form adds 10 products with ObjectID "123456" in the cart.
       <input type="submit" name="submit">
     </form>
 
-_To see how to call API method from a HTML form See [Call API from HTML Form](./docs/api-call-in-form)._
+_To see how to call API method from a HTML form See [Call API from HTML Form](/docs/api-introduction)._
+
 
 ### [POST] Method cart/update_item
 
 Update a cart line quantity.
+
 
 #### Options
 
@@ -192,7 +199,8 @@ This form updates line #1 to set quantity = 8.
       <input type="submit" name="submit">
     </form>
 
-_To see how to call API method from a HTML form See [Call API from HTML Form](./docs/api-call-in-form)._
+_To see how to call API method from a HTML form See [Call API from HTML Form](/docs/api-introduction)._
+
 
 ### [GET] Method cart/get_delivery_methods
 
@@ -211,7 +219,7 @@ Display delivery methods.
     {% endfor %}
 
 
-_To see how to get data from  API see [ERP tag on Special tag ](./docs/special-tag)._
+_To see how to get data from  API see [ERP tag on Special tag ](/docs/special-tag)._
 
 
 ### [POST] Method cart/apply_delivery_method
@@ -242,6 +250,6 @@ Form to set carrier on cart.
       <input type="submit" name="submit">
     </form>
 
-_To see how to call API method from a HTML form See [Call API from HTML Form](./docs/api-call-in-form)._
+_To see how to call API method from a HTML form See [Call API from HTML Form](/docs/api-introduction)._
 
 

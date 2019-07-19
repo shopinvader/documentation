@@ -33,6 +33,11 @@
     name: File structure
     category: template
     content: "<%= inject('doc_pages/en/file-structure.md') %>"
+- 'Introduction':
+    _slug: 'api-introduction'
+    name: Introduction
+    category: api
+    content: "<%= inject('doc_pages/en/api-introduction.md') %>"
 
 - 'Products':
     _slug: 'products'
