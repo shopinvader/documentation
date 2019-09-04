@@ -1,9 +1,9 @@
 ## About Storefront API
 
-Shopinvader gives you an REST API to build customized purchasing experiences. The Storefront REST API is used on your webshop template to interact with shopping objects like the cart, logged customer, carrier, addresses. 
-This API gives you control to Add or update data in Odoo via specific methods. The Shopinvader's Storefront REST API built on few  shopinvaders Odoo's modules.
+Shopinvader gives you a REST API to build customized purchasing experiences. The Storefront REST API is used on your webshop template to interact with shopping objects like the cart, logged customer, carrier or addresses. 
+This API gives you control to Add or update data in Odoo via specific methods. The Shopinvader's Storefront REST API is built on a few Odoo Shopinvader modules.
 
-Shopinvader installation include an access to swagger in Odoo to get API specification. Swagger takes the manual work out storefront API documentation. To see Swagger on odoo go to
+Shopinvader installation includes an access to swagger from Odoo to get your exact API specifications. Swagger takes the manual work out storefront API documentation. To see Swagger in Odoo go to
 < your-odoo-url >/api-docs.
 
 
@@ -15,8 +15,8 @@ Using the Shopinvader Storefront API, you can:
 
 **Product and Categories**
 
-Product and categories data are not provided directly by the REST API. Get product and categories data by using elasticsearch API instead of the REST API. 
-This is quite an interesting specificity to avoid overloading Odoo in case where you only want to display product page or categories pages. 
+Product and categories data are not provided directly by the REST API. These data are fetched via Elasticsearch API instead of the REST API.
+This is quite an interesting specificity to avoid overloading Odoo when someone only wants to display products pages or categories pages.
 Elasticsearch indexes are feeded by Odoo with product and categories data. 
 
 
@@ -26,15 +26,15 @@ Elasticsearch indexes are feeded by Odoo with product and categories data.
 
 ### API Authentification
 
-REST API requiere authentification with API Key. API credential are defined in Odoo.
-To defined REST API credential go on Shopinvader section on Odoo, select your Shopinvader Website and defined new values on Credentials tabs.
+REST API requiere authentication with an API Key. API credentials are defined in Odoo.
+To define the REST API credentials, go on the Shopinvader section in Odoo, select your Shopinvader Website and define new values in the Credentials tab.
 
 
 ### Ways to call the Storefront API
 
 Shopinvader provides the flexibility to call by using :
--  HTTP Request on the REST API used for external apps,
--  HTML form to interact with API on your liquid template.
+-  HTTP Requests on the REST API, for external apps,
+-  HTML forms to interact with API, for your liquid templates.
 
 #### Using HTTP REQUEST
 
@@ -64,7 +64,7 @@ Shopinvader provides other way to run API call thanks to using HTML Form on your
 This method gives you control on API via a simple HTML Form in order to simplify API request on your shopinvader template. 
 API Entry Point and API authentification is automaticaly filled when you make an API request via an HTML form thanks to credentials defined in site configuration.
 
-HTML form submission calls API method and make redirection in order to API response status.
+HTML form submission calls an API method and makes a redirection in order to get the API response status.
 
 This kind of HTML form required some specifics attributes and fields :
 
