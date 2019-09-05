@@ -14,15 +14,21 @@ html {
   @include media-breakpoint-down(sm) {
     font-size: 14px;
   }
+
+  main {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    .container-fluid {
+      max-width: 1800px;
+    }
+  }
 }
 
 @if $page-max-width > 0 {
   body {
 
     background-color: $main-bg;
-    .navbar-header {
-        max-width: $page-max-width;
-    }
     .page {
       background-color: $body-bg;
       //max-width: $page-max-width;
@@ -255,4 +261,13 @@ html {
   &.btn-success {
     color: $white;
   }
+}
+.attachment-full {
+  position: absolute;
+  @include media-breakpoint-up(sm) {
+    position: fixed;
+  }
+  right: 0;
+  z-index: 100;
+  top: 0;
 }

@@ -1,5 +1,12 @@
 .locomotive-section[data-locomotive-section-type="header"] {
+	@include media-breakpoint-up(sm) {
+    position: fixed;
+    z-index: 90;
+    width: 100%;
+    top: 0;
+  }
   .navbar {
-    background: linear-gradient(lighten(theme-color('primary'), 5), theme-color('primary'));
+    background: theme-color('primary');
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
   }
 }
