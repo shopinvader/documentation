@@ -1,7 +1,7 @@
 ## Requirement
 
 
-Before starting, you need to make sure your system has docker, docker compose and python's virtualenv.
+Before starting, you need to make sure your system has docker, docker compose.
 
 
 If it is not the case, please refer to :
@@ -11,9 +11,6 @@ If it is not the case, please refer to :
 
 
 - Docker Compose : [docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
-
-- mkvirtualenvwrapper : [https://virtualenvwrapper.readthedocs.io/en/latest/index.html](https://virtualenvwrapper.readthedocs.io/en/latest/index.html)
-
 
 ## Installation
 
@@ -42,10 +39,10 @@ odoo12-addon-shopinvader-payment-stripe
 odoo12-addon-shopinvader-payment-sips
 ```
 
-In a virtualenv(<strong>running python3</strong>) install Shopinvader using the requirement.txt file with:
+Using <strong>python3</strong> install Shopinvader using the requirement.txt file with:
 
 ```
-pip install -r ./requirements.txt
+python -m pip install -r ./requirements.txt
 ```
 
 Once Odoo is installed, install the module named '<strong>shopinvader_demo_app</strong>' which will install Shopinvader with some demo data.<br/>
