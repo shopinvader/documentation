@@ -1,8 +1,14 @@
-version: '3'
 services:
   wagon:
     image: quay.io/akretion/docky-ruby:latest
-    ports:
-      - 3333:3333
+    environment:
+      - API_EMAIL=$API_EMAIL
+      - API_KEY=$API_KEY
     volumes:
-    - .:/workspace
+      - .:/workspace
+      - $HOME/.docky/shared/bundle:/usr/local/bundle
+    labels:
+      traefik.wagon.frontend.rule: "Host:doc.dy"
+      traefik.wagon.port: 3333
+      traefik.enable: True
+version: '3'
