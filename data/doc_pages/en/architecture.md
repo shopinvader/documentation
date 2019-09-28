@@ -41,11 +41,14 @@ It’s the template of your website. It defines the layout of the pages, the sty
 It’s where you put your HTML / JS / CSS.
 
 
-### Algolia
+### Search engine
 
-It’s a search engine. Odoo sends the products and categories to algolia. Locomotive and the user’s browser fetch products and categories from Algolia.
-Why we need a search engine ? It offers us a very rich set of search features like facetting, search by synonyms and spelling. It’s effective and provide very good performances.
+Odoo sends the products and categories the search engine.
 
+Locomotive and the user’s browser fetch products and categories from the search engine.
+Why we need a search engine ? It offers us a very rich set of search features like facetting, search by synonyms and spelling. It’s effective and provides very good performance.
+
+Shopinvader is compatible with 2 search engines: Algolia and Elasticsearch.
 
 ## Workflow
 
@@ -54,8 +57,8 @@ All components communicate between them as follows:
 
 - Odoo push configuration to Locomotive.
 
-- Odoo push products and categories to Algolia.
+- Odoo push products and categories to the seach engine (Algolia/Elasticsearch).
 
-- Locomotive fetch from Aloglia products and categories.
+- Locomotive fetch from the search engine products and categories.
 
 - Locomotive push and fetch from Odoo carts and other customer informations.

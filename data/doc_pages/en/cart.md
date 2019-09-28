@@ -55,11 +55,9 @@ Shipping customer address, selected carrier and shipping cost.
 | address | Objects | Customer shipping address |
 
 
-
 > Make an API request to cart/get_delivery_methods to get available carrier list according to delivery area.
 >
 > **Selected_carrier** and **amount** are set only after call cart/apply_delivery_method API method
-
 
 ### Invoicing
 
@@ -143,7 +141,9 @@ Setting a shipping address is necessary to make API calls on `cart/get_delivery_
       <input type="submit" name="submit">
     </form>
 
+
 _To see how to call API method from a HTML form See [Call API from HTML Form](/docs/api-introduction)._
+
 
 
 ### [POST] Method cart/add_item 
@@ -176,7 +176,6 @@ _To see how to call API method from a HTML form See [Call API from HTML Form](/d
 ### [POST] Method cart/update_item
 
 Update a cart line quantity.
-
 
 #### Options
 
@@ -217,6 +216,7 @@ Display delivery methods.
         {{ carrier.name }}
       </label>
     {% endfor %}
+
 
 
 _To see how to get data from  API see [ERP tag on Special tag ](/docs/special-tag)._
