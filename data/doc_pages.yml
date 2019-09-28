@@ -1,9 +1,3 @@
-- 'Why Shopinvader':
-    _slug: 'why-shopinvader'
-    name: Why Shopinvader
-    category: introduction
-    content: "<%= inject('doc_pages/en/why-shopinvader.md') %>"
-
 - 'Architecture':
     _slug: 'architecture'
     name: Architecture
