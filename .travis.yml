@@ -6,10 +6,4 @@ before_install:
   - bundle install
 
 script:
-  - echo "NOTHING"
-
-deploy:
-  provider: script
-  script: bundle exec wagon deploy -d -v production
-  on:
-    branch: master
+  - ./travis/deploy

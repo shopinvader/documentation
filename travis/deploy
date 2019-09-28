@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ "$TRAVIS_BRANCH" == "master" ]]
+  then
+    echo "Deploying documentation"
+    echo 'yes' | bundle exec wagon deploy -d -v production
+fi
