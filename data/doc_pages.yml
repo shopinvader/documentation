@@ -2,87 +2,82 @@
     _slug: 'architecture'
     name: Architecture
     category: introduction
-    content: "<%= inject('doc_pages/en/architecture.md') %>"
+    content: "<%= inject('doc_pages/en/introduction/architecture.md') %>"
 
 - 'Installation':
     _slug: 'installation'
     name: Installation
     category: installation
-    content: "<%= inject('doc_pages/en/installation.md') %>"
+    content: "<%= inject('doc_pages/en/get-started/installation.md') %>"
 
 - 'Deploy new website':
     _slug: 'deploy-website'
     name: Deploy new website
     category: installation
-    content: "<%= inject('doc_pages/en/deploy-website.md') %>"
+    content: "<%= inject('doc_pages/en/get-started/deploy-website.md') %>"
 
 - 'Get the template':
     _slug: 'get-template'
     name: Get the template
     category: template
-    content: "<%= inject('doc_pages/en/get-template.md') %>"
+    content: "<%= inject('doc_pages/en/template/get-template.md') %>"
 
 - 'File structure':
     _slug: 'file-structure'
     name: File structure
     category: template
-    content: "<%= inject('doc_pages/en/file-structure.md') %>"
-- 'Introduction':
-    _slug: 'api-introduction'
-    name: Introduction
-    category: api
-    content: "<%= inject('doc_pages/en/api-introduction.md') %>"
-
-- 'Products':
-    _slug: 'products'
-    name: Products
-    category: api
-    content: "<%= inject('doc_pages/en/products.md') %>"
-
-- 'Cart':
-    _slug: 'cart'
-    name: cart
-    category: api
-    content: "<%= inject('doc_pages/en/cart.md') %>"
-
-- 'Categories':
-    _slug: 'categories'
-    name: Categories
-    category: api
-    content: "<%= inject('doc_pages/en/categories.md') %>"
-
-- 'Sales':
-    _slug: 'sales'
-    name: Sales
-    category: api
-    content: "<%= inject('doc_pages/en/sales.md') %>"
-
-- 'Customers':
-    _slug: 'customers'
-    name: Customers
-    category: api
-    content: "<%= inject('doc_pages/en/customers.md') %>"
-
-- 'Notifications':
-    _slug: 'notifications'
-    name: Notifications
-    category: api
-    content: "<%= inject('doc_pages/en/notifications.md') %>"
-
-- 'Shopping cart':
-    _slug: 'shopping-cart'
-    name: Shopping cart
-    category: api
-    content: "<%= inject('doc_pages/en/cart.md') %>"
-
-- 'Swagger':
-    _slug: 'swagger'
-    name: Swagger
-    category: api
-    content: "<%= inject('doc_pages/en/cart.md') %>"
+    content: "<%= inject('doc_pages/en/template/file-structure.md') %>"
 
 - 'Special tags/attributes':
     _slug: 'special-tag'
     name: Special tags/attributes
     category: template
-    content: "<%= inject('doc_pages/en/special-tag.md') %>"
+    content: "<%= inject('doc_pages/en/template/special-tag.md') %>"
+
+- 'Introduction':
+    _slug: 'api-introduction'
+    name: Introduction
+    category: api
+    content: "<%= inject('doc_pages/en/api-reference/api-introduction.md') %>"
+
+- 'Products':
+    _slug: 'products'
+    name: Products
+    category: api
+    content: "<%= inject('doc_pages/en/api-reference/products.md') %>"
+
+- 'Cart':
+    _slug: 'cart'
+    name: cart
+    category: api
+    content: "<%= inject('doc_pages/en/api-reference/cart.md') %>"
+
+- 'Categories':
+    _slug: 'categories'
+    name: Categories
+    category: api
+    content: "<%= inject('doc_pages/en/api-reference/categories.md') %>"
+
+- 'Sales':
+    _slug: 'sales'
+    name: Sales
+    category: api
+    content: "<%= inject('doc_pages/en/api-reference/sales.md') %>"
+
+- 'Customers':
+    _slug: 'customers'
+    name: Customers
+    category: api
+    content: "<%= inject('doc_pages/en/api-reference/customers.md') %>"
+
+- 'Notifications':
+    _slug: 'notifications'
+    name: Notifications
+    category: api
+    content: "<%= inject('doc_pages/en/api-reference/notifications.md') %>"
+
+- 'Swagger':
+    _slug: 'swagger'
+    name: Swagger
+    category: api
+    content: "<%= inject('doc_pages/en/api-reference/swagger.md') %>"
