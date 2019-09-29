@@ -10,11 +10,29 @@
     category: installation
     content: "<%= inject('doc_pages/en/get-started/installation.md') %>"
 
+- 'Fonctional Training':
+    _slug: 'fonctional-training'
+    name: Fonctional Training
+    category: installation
+    content: "<%= inject('doc_pages/en/get-started/fonctional-training.md') %>"
+
+- 'Discover Section':
+    _slug: 'discover-section'
+    name: Discover Section
+    category: installation
+    content: "<%= inject('doc_pages/en/get-started/discover-section.md') %>"
+
 - 'Deploy new website':
     _slug: 'deploy-website'
     name: Deploy new website
     category: installation
     content: "<%= inject('doc_pages/en/get-started/deploy-website.md') %>"
+
+- 'Technical Training':
+    _slug: 'technical-training'
+    name: Technical Training
+    category: installation
+    content: "<%= inject('doc_pages/en/get-started/technical-training.md') %>"
 
 - 'Get the template':
     _slug: 'get-template'
