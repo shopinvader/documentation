@@ -22,6 +22,12 @@
     category: installation
     content: "<%= inject('doc_pages/en/get-started/discover-section.md') %>"
 
+- 'Designer Introduction':
+    _slug: 'designer-introduction'
+    name: Designer Introduction
+    category: installation
+    content: "<%= inject('doc_pages/en/get-started/designer-introduction.md') %>"
+
 - 'Deploy new website':
     _slug: 'deploy-website'
     name: Deploy new website

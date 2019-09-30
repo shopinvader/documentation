@@ -10,15 +10,14 @@ Please keep in mind the following addresses:
 ## Configure Odoo
 
 After installing the demo, you need to synchronize your odoo with your website.
-Go to **Shopinvader** menu and open the *Demo Shopinvader Website*
+Go to `Shopinvader` menu and open the `Demo Shopinvader Website`
+
+<img src="/samples/fonctional-training/odoo-config-step-1.png" width="400" hight="400">
 
 
-#### TODO ADD screenshot
+Go in the tab `developper` and click on `Reset site settings`
 
-
-Go in the tab **developper** and click on **Reset site settings**
-
-#### TODO ADD screenshot
+<img src="/samples/fonctional-training/odoo-config-step-2.png" width="400" hight="400">
 
 
 ## Play with your installation
@@ -30,11 +29,18 @@ In order to understand how shopinvader works we are going to play with it.
 
 First go on your website and register as a customer.
 
-After doing this go into odoo in menu **Sales > Order > Customer**.
+After doing this go into odoo in menu `Sales > Order > Customer`.
 You should see your new customer
 
 
-#### TODO ADD screenshot
+<img src="/samples/fonctional-training/odoo-customer.png" width="400" hight="400">
+
+
+Now go to your website
+
+- modify your customer information
+- add custom addresses
+- check the result on Odoo
 
 
 ### Add product in the cart
@@ -42,10 +48,10 @@ You should see your new customer
 Navigate in the category, search a product. When you have found the right product, add it to the cart.
 
 
-Now go into odoo in menu ** Sales > Cart **, you should see your cart.
+Now go into odoo in menu `Sales > Cart`, you should see your cart.
 
 
-#### TODO ADD screenshot
+<img src="/samples/fonctional-training/odoo-cart.png" width="400" hight="400">
 
 
 Now add other product, change the quantity in the cart and check the result into Odoo
@@ -53,11 +59,57 @@ Now add other product, change the quantity in the cart and check the result into
 
 ### Checkout
 
-### Check status
+Now you cart is ready, let's try to do the checkout
 
-### Bind products
+Fill your address and before finishing the checkout go back into odoo.
+You see the step complet by the customer
 
-### Export product
+<img src="/samples/fonctional-training/odoo-cart.png" width="400" hight="400">
 
-### Buy this new product
 
+Now finish the checkout and pay by check or bank statement
+
+After finishing, go to your account menu and check your sale order history
+
+### Process the sale order
+
+Go back in odoo to process the sale order.
+
+
+First confirm the sale order
+
+#### TODO add screenshot
+
+
+
+
+Go back in your website and check the change of state.
+
+
+
+### Product synchronisation
+
+Products and categories are exported into a search engine.
+For this tutorial we use elastic search.
+
+When you change a product it is not immediatly exported.
+For exporting a product 2 step will be applyed
+
+
+### Recomputing the json
+
+Json that represent all products information is build and store in odoo
+
+A cron run every X time to recompute all the json of all product and flag if the json have change.
+If the json have change the product will be exported
+
+You can force to recompute a json by clicking on `recompute product`
+
+#### TODO add screenshoot
+
+
+### Exporting the json
+
+A cron is running every X time to generate a bacth export job.
+
+#### TODO add screenshoot
