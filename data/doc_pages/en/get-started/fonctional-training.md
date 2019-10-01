@@ -75,41 +75,67 @@ After finishing, go to your account menu and check your sale order history
 
 Go back in odoo to process the sale order.
 
-
-First confirm the sale order
-
-#### TODO add screenshot
-
-
-
-
-Go back in your website and check the change of state.
-
+- confirm the sale order
+- check the change on your website account
+- process the delivery on Odoo side
+- check the change on your website account
 
 
 ### Product synchronisation
 
-Products and categories are exported into a search engine.
-For this tutorial we use elastic search.
+By default binded products and categories are synchronised every 24 hours with the search engine but you can force the export.
+So keep in mind when you change a product it is not immediatly exported.
 
-When you change a product it is not immediatly exported.
-For exporting a product 2 step will be applyed
-
-
-### Recomputing the json
-
-Json that represent all products information is build and store in odoo
-
-A cron run every X time to recompute all the json of all product and flag if the json have change.
-If the json have change the product will be exported
-
-You can force to recompute a json by clicking on `recompute product`
-
-#### TODO add screenshoot
+For exporting a product 2 step will be applied ** Recomputing the json ** and then ** Exporting it **
 
 
-### Exporting the json
+#### Recomputing the json
+
+On the **shopinvader.variant** we store a json will all the product information.
+
+A cron run every X time and will recompute this json and flag the product with modification.
+
+Go to `Setting > Technical > Automation > Scheduled Action`
+
+And click on `Search Engine: recompute all index`
+
+<img src="/samples/fonctional-training/odoo-recompute-cron.png" width="400" hight="400">
+
+
+Now click on run and go to the `queue job` menu to see what is happening
+
+Take a look to `Shopinvader > Variant` and group by state.
+
+
+#### Exporting the json
 
 A cron is running every X time to generate a bacth export job.
 
-#### TODO add screenshoot
+Go to `Setting > Technical > Automation > Scheduled Action`
+
+And click on `Search Engine: Generate Job for exporting binding per index`
+
+
+<img src="/samples/fonctional-training/odoo-export-cron.png" width="400" hight="400">
+
+
+After looking at the job and checking the state of the shopinvader variant.
+
+Try to
+
+- modify it
+- recompute the json
+- check that the state have change
+- run the export, check the state
+- and then check the result on the website
+
+
+#### Tips
+
+When developping it's cool to sometime force, the export, re-synchronize the data between a corrupted index, dropping the data of the index...
+
+For that you have some special action accessible from the shopinvader menu
+
+
+<img src="/samples/fonctional-training/odoo-search-engine-action.png" width="400" hight="400">
+

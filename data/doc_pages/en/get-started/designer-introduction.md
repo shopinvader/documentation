@@ -1,5 +1,14 @@
 ## Introduction
 
+In order to have a starting point, you can use the demo template, this is the one used to power up the demo Shopinvader website.
+
+In your folder of the clone repo from shopinvader-getting-started.git run the following command:
+
+```
+git clone https://github.com/shopinvader/shopinvader-template template
+```
+
+
 To start developping a theme for shopinvader you need to understand 2 things:
 
 - the template structure
@@ -53,6 +62,12 @@ You should see this like
 - a tool for deploying your website
 - a command line cli for interacting with your locomotive
 
+
+Wagon is already installed into the docker image so run it
+
+```
+docker-compose run --service-port wagon
+```
 
 ### Wagon serve
 

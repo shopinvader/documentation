@@ -105,3 +105,9 @@
     name: Swagger
     category: api
     content: "<%= inject('doc_pages/en/api-reference/swagger.md') %>"
+
+- 'Odoo pip installation':
+    _slug: 'odoo-pip-Installation'
+    name: Odoo PIP installation
+    category: misc
+    content: "<%= inject('doc_pages/en/misc/odoo-pip-installation.md') %>"
