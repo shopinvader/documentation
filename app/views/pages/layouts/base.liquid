@@ -43,7 +43,7 @@ is_layout: false
     {% endblock %}
     {{'highlight.pack.js' | javascript_tag}}
     {{'atom-one-dark.css' | stylesheet_tag}}
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Lato:400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     {{ 'application.css' | stylesheet_tag }}
     <link rel="shortcut icon" href="{{ 'favicon.png' | theme_image_url }}">
@@ -58,11 +58,7 @@ is_layout: false
   <body class="{{css_body}}">
     <style media="screen">
       body {
-        font-family: Comfortaa, Roboto, Arial;
         background-color: {{site.metafields.theme.body_bg_color}};
-      }
-      h1, h2, h3, h4, h5 {
-        font-family: Comfortaa, Roboto, Arial;
       }
       body .page {
         max-width: {{site.metafields.theme.page_max_width}};

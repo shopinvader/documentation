@@ -10,3 +10,34 @@ sections_dropzone_content: >
 ---
 
 {% extends 'layouts/default' %}
+{% block 'body/content' %}
+	<div class="container pt-5 pb-3">
+		<div class="row justify-content-center">
+			{% for doc_category in contents.doc_categories %}
+				
+				<div class="col-12 {% if forloop.index0 != 0 %}
+					col-md-6{% endif %} mb-4">
+					<div class="card card-body  h-100">
+						<a href="{%path_to doc_category%}" class="h4 text-uppercase">
+							<span class="text-primary">
+								{{forloop.index}}
+							</span>
+							{{doc_category.name}}
+
+						</a>
+						<ul class="list-group list-group-flush">
+							{% for page in doc_category.pages %}
+								<li class="list-group-item">
+									<a href="{% path_to page%}">
+										{{page.name}}
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+
+			{% endfor %}
+		</div>
+	</div>
+{% endblock%}

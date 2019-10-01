@@ -80,7 +80,7 @@ $breadcrumb-active-color:       inherit;
 $breadcrumb-divider:            " > ";
 
 //fonts
-$font-family-sans-serif: 'Comfortaa', 'Arial', 'Ubuntu', Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: 'Lato', 'Arial', 'Ubuntu', "Helvetica Neue", Arial, sans-serif;
 $font-family-base:       $font-family-sans-serif;
 
 
@@ -92,8 +92,8 @@ $h4-font-size: 1.3rem;
 $h5-font-size: 1.2rem;
 $h6-font-size: 1rem;
 $headings-line-height:   1.1;
-$headings-font-family: 'Montserrat';
-$headings-font-weight: 300;
+$headings-font-family: 'Montserrat', 'Lato';
+$headings-font-weight: 400;
 // Header
 $header-bg: $white;
 $header-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.3);
