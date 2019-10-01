@@ -12,6 +12,6 @@
     _slug: "api"
     name: "API References"
 
-- "Backend Configuration":
-    _slug: "configuration"
-    name: "Configuration"
+- "Misc":
+    _slug: "misc"
+    name: "Misc"

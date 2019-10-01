@@ -1,8 +1,7 @@
-## Requirement
+## Introduction
 
-You need to have a locomotive running.
+Now as you know how wagon work, let's try to create a new website and deploy it.
 
-You can use the online locomotive demo website [shopinvader.com](https://shopinvader.com) or follow the step in [doc.locomotivecms.com/docs](https://doc.locomotivecms.com/docs) to start your own one
 
 ## Website creation
 

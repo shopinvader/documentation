@@ -8,6 +8,8 @@ services:
       - .:/workspace
       - $HOME/.docky/shared/bundle:/usr/local/bundle
     labels:
+      docky.main.service: True
+      docky.user: ubuntu
       traefik.wagon.frontend.rule: "Host:doc.dy"
       traefik.wagon.port: 3333
       traefik.enable: True
