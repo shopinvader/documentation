@@ -1,6 +1,6 @@
 ## Introduction
 
-This is a fonctional training for learning how to use shopinvader.
+This is a functional training for learning how to use shopinvader.
 Please keep in mind the following addresses:
 
 - Odoo: http://odoo.localtest.me:8069
@@ -12,12 +12,12 @@ Please keep in mind the following addresses:
 After installing the demo, you need to synchronize your odoo with your website.
 Go to `Shopinvader` menu and open the `Demo Shopinvader Website`
 
-<img src="/samples/fonctional-training/odoo-config-step-1.png" width="400" hight="400">
+<img src="/samples/functional-training/odoo-config-step-1.png" width="400" hight="400">
 
 
 Go in the tab `developper` and click on `Reset site settings`
 
-<img src="/samples/fonctional-training/odoo-config-step-2.png" width="400" hight="400">
+<img src="/samples/functional-training/odoo-config-step-2.png" width="400" hight="400">
 
 
 ## Play with your installation
@@ -33,7 +33,7 @@ After doing this go into odoo in menu `Sales > Order > Customer`.
 You should see your new customer
 
 
-<img src="/samples/fonctional-training/odoo-customer.png" width="400" hight="400">
+<img src="/samples/functional-training/odoo-customer.png" width="400" hight="400">
 
 
 Now go to your website
@@ -51,7 +51,7 @@ Navigate in the category, search a product. When you have found the right produc
 Now go into odoo in menu `Sales > Cart`, you should see your cart.
 
 
-<img src="/samples/fonctional-training/odoo-cart.png" width="400" hight="400">
+<img src="/samples/functional-training/odoo-cart.png" width="400" hight="400">
 
 
 Now add other product, change the quantity in the cart and check the result into Odoo
@@ -64,7 +64,7 @@ Now you cart is ready, let's try to do the checkout
 Fill your address and before finishing the checkout go back into odoo.
 You see the step complet by the customer
 
-<img src="/samples/fonctional-training/odoo-cart.png" width="400" hight="400">
+<img src="/samples/functional-training/odoo-cart.png" width="400" hight="400">
 
 
 Now finish the checkout and pay by check or bank statement
@@ -99,7 +99,7 @@ Go to `Setting > Technical > Automation > Scheduled Action`
 
 And click on `Search Engine: recompute all index`
 
-<img src="/samples/fonctional-training/odoo-recompute-cron.png" width="400" hight="400">
+<img src="/samples/functional-training/odoo-recompute-cron.png" width="400" hight="400">
 
 
 Now click on run and go to the `queue job` menu to see what is happening
@@ -116,7 +116,7 @@ Go to `Setting > Technical > Automation > Scheduled Action`
 And click on `Search Engine: Generate Job for exporting binding per index`
 
 
-<img src="/samples/fonctional-training/odoo-export-cron.png" width="400" hight="400">
+<img src="/samples/functional-training/odoo-export-cron.png" width="400" hight="400">
 
 
 After looking at the job and checking the state of the shopinvader variant.
@@ -137,5 +137,5 @@ When developping it's cool to sometime force, the export, re-synchronize the dat
 For that you have some special action accessible from the shopinvader menu
 
 
-<img src="/samples/fonctional-training/odoo-search-engine-action.png" width="400" hight="400">
+<img src="/samples/functional-training/odoo-search-engine-action.png" width="400" hight="400">
 
