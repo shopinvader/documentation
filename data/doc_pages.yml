@@ -7,56 +7,56 @@
 - 'Installation':
     _slug: 'installation'
     name: Installation
-    category: installation
-    content: "<%= inject('doc_pages/en/get-started/installation.md') %>"
+    category: functional
+    content: "<%= inject('doc_pages/en/functional/installation.md') %>"
 
-- 'Functional Training':
-    _slug: 'functional-training'
-    name: Functional Training
-    category: installation
-    content: "<%= inject('doc_pages/en/get-started/functional-training.md') %>"
+- 'First step with shopinvader':
+    _slug: 'first-step-with-shopinvader'
+    name: 'First step with shopinvader'
+    category: functional
+    content: "<%= inject('doc_pages/en/functional/first-step-with-shopinvader.md') %>"
 
 - 'Discover Section':
     _slug: 'discover-section'
     name: Discover Section
     category: installation
-    content: "<%= inject('doc_pages/en/get-started/discover-section.md') %>"
+    content: "<%= inject('doc_pages/en/functional/discover-section.md') %>"
 
 - 'Designer Introduction':
     _slug: 'designer-introduction'
     name: Designer Introduction
-    category: installation
-    content: "<%= inject('doc_pages/en/get-started/designer-introduction.md') %>"
+    category: web-designer
+    content: "<%= inject('doc_pages/en/web-designer/designer-introduction.md') %>"
 
 - 'Deploy new website':
     _slug: 'deploy-website'
     name: Deploy new website
-    category: installation
-    content: "<%= inject('doc_pages/en/get-started/deploy-website.md') %>"
+    category: web-designer
+    content: "<%= inject('doc_pages/en/web-designer/deploy-website.md') %>"
 
-- 'Technical Training':
-    _slug: 'technical-training'
-    name: Technical Training
-    category: installation
-    content: "<%= inject('doc_pages/en/get-started/technical-training.md') %>"
+- 'Play with the API':
+    _slug: 'play-with-the-api'
+    name: Play with the API
+    category: web-designer
+    content: "<%= inject('doc_pages/en/web-designer/play-with-the-api.md') %>"
 
 - 'Get the template':
     _slug: 'get-template'
     name: Get the template
-    category: template
-    content: "<%= inject('doc_pages/en/template/get-template.md') %>"
+    category: web-designer
+    content: "<%= inject('doc_pages/en/web-designer/get-template.md') %>"
 
 - 'File structure':
     _slug: 'file-structure'
     name: File structure
-    category: template
-    content: "<%= inject('doc_pages/en/template/file-structure.md') %>"
+    category: web-designer
+    content: "<%= inject('doc_pages/en/web-designer/file-structure.md') %>"
 
 - 'Special tags/attributes':
     _slug: 'special-tag'
     name: Special tags/attributes
-    category: template
-    content: "<%= inject('doc_pages/en/template/special-tag.md') %>"
+    category: web-designer
+    content: "<%= inject('doc_pages/en/web-designer/special-tag.md') %>"
 
 - 'Introduction':
     _slug: 'api-introduction'
@@ -109,5 +109,5 @@
 - 'Odoo pip installation':
     _slug: 'odoo-pip-Installation'
     name: Odoo PIP installation
-    category: misc
-    content: "<%= inject('doc_pages/en/misc/odoo-pip-installation.md') %>"
+    category: odoo-developper
+    content: "<%= inject('doc_pages/en/odoo-developper/odoo-pip-installation.md') %>"

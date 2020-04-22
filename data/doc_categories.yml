@@ -1,17 +1,19 @@
 - "Introduction":
     _slug: "introduction"
     name: "Introduction"
-- "Get started":
-    _slug: "installation"
-    name: "Installation & Configuration"
-- "Template":
-    _slug: "template"
-    name: "Template"
+
+- "Functional discover":
+    _slug: "functional"
+    name: "Fucntional discover"
+
+- "Web designer":
+    _slug: "web-designer"
+    name: "Web designer"
+
+- "Odoo Developper":
+    _slug: "odoo-developper"
+    name: "Odoo Developper"
 
 - "API References":
     _slug: "api"
     name: "API References"
-
-- "Misc":
-    _slug: "misc"
-    name: "Misc"
