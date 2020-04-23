@@ -4,11 +4,11 @@
     category: introduction
     content: "<%= inject('doc_pages/en/introduction/architecture.md') %>"
 
-- 'Installation':
-    _slug: 'installation'
+- 'Demo Installation':
+    _slug: 'demo-installation'
     name: Installation
     category: functional
-    content: "<%= inject('doc_pages/en/functional/installation.md') %>"
+    content: "<%= inject('doc_pages/en/functional/demo-installation.md') %>"
 
 - 'First step with shopinvader':
     _slug: 'first-step-with-shopinvader'
