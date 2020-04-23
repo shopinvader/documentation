@@ -1,6 +1,21 @@
+## Requirement
+
+In order to build the asset you need to install yarn
+
+- Please install it : [https://classic.yarnpkg.com/fr/docs/install](https://classic.yarnpkg.com/fr/docs/install)
+
+If you are not familiar with yarn here are the main cmd:
+
+- `yarn start`         => start yarn and rebuild asset after each change
+- `yarn build:dev`     => build you asset in dev mode (without any compression, optimisation)
+- `yarn build:prod`    => build your asset in production mode (use it before deploying)
+
+[comment]: <> TODO we should build a tools that wrapper the docker image and install it here
+
 ## Introduction
 
-In order to have a starting point, you can use the demo template, this is the one used to power up the demo Shopinvader website.
+As we strongly believe in OpenSource, we provide an OpenSource Template that you can use for all your new project.
+This template is the one used to power up the demo Shopinvader website.
 
 In your folder of the clone repo from shopinvader-getting-started.git run the following command:
 
@@ -63,8 +78,6 @@ You should see this like
 - a command line cli for interacting with your locomotive
 
 
-Wagon is already installed into the docker image so run it
-
 ```
 docker-compose run --service-port wagon
 ```
@@ -77,7 +90,7 @@ In the docker wagon shell launch
 
 `wagon serve`
 
-Now go on `http://localhost:3333`
+Now go on `http://wagon.localhost`
 
 
 You have a local rendering of the website.
@@ -113,7 +126,7 @@ But first take a look to the `deploy.yml` file in the config directory.
 
 ```
 test:
-  host: http://locomotive.localtest.me:3000
+  host: http://locomotive.localhost
   handle: shopinvader
   email: demo@shopinvader.com
   api_key: d49cd50f6f0d2b163f48fc73cb249f0244c37074
@@ -127,7 +140,7 @@ Let's deploy, now run into your docker wagon (-v is for verbose mode)
 `wagon deploy test -v`
 
 
-Check the result on http://my-website.localtest.me:3000
+Check the result on [http://my-website-1.localhost](http://my-website-1.localhost)
 
 The alert is here but not the change you have done on the blog post.
 
