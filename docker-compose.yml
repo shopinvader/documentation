@@ -8,9 +8,9 @@ services:
       - .:/workspace
       - $HOME/.docky/shared/bundle:/usr/local/bundle
     labels:
-      docky.main.service: True
-      docky.user: ubuntu
-      traefik.wagon.frontend.rule: "Host:doc.dy"
-      traefik.wagon.port: 3333
-      traefik.enable: True
+      - "docky.help=http://doc.localhost:3333"
+      - "docky.main.service=True"
+      - "docky.user=ubuntu"
+    ports:
+      - "127.0.0.1:3333:3333"
 version: '3'

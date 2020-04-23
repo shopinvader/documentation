@@ -16,7 +16,7 @@ In real case your Odoo, Locomotive and Elastic application will be installed on 
 ## Requirement
 
 
-Before starting, you need to make sure your system has docker, docker compose.
+Before starting, you need to make sure your system has docker and docker compose.
 
 
 If it is not the case, please refer to :
@@ -46,11 +46,20 @@ Start docker:
 cd shopinvader-getting-started
 ```
 
-This might take a few minutes, as it will setup everything.
-
 ```
 docker-compose up
 ```
+
+This might take several minutes, as it will setup everything.
+
+<div class="alert alert-danger">
+<p>If you have the following message</p>
+
+<p>Bind for 127.0.0.1:80 failed: port is already allocated</p>
+
+<p>Please do not change the port in the docker-compose file but instead stop the service that use this port on your server (maybe apache, nginx or traefik). Everything in the demo have been configured for running on port 80.</p>
+</div>
+
 
 <div class="alert alert-info">
 Use `docker-compose up -d` if you want to use your terminal while the server is up. You can then use `docker-compose down` to stop it.
@@ -66,14 +75,14 @@ Use `docker-compose up -d` if you want to use your terminal while the server is 
 </div>
 
 Now we have running Odoo and Shopinvader instances.
+The frontend website will not work yet correctly as we need to push some configuration from odoo
 
+- **Website frontend**: [http://website-1.localhost](http://website-1.localhost)
 
-- **Website frontend**: [http://localhost:3000](http://localhost:3000)
-
-- **Backend**: [http://localhost:3000/locomotive](http://localhost:3000/locomotive)
+- **Backend**: [http://locomotive.localhost/locomotive](http://locomotive.localhost/locomotive)
   + user : demo@shopinvader.com
   + password: akretion
 
-- **Odoo**: [http://localhost:8069](http://localhost:8069)
+- **Odoo**: [http://odoo.localhost](http://odoo.localhost)
   + user: admin
   + password : admin
