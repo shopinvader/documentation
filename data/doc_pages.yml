@@ -40,12 +40,6 @@
     category: web-designer
     content: "<%= inject('doc_pages/en/web-designer/play-with-the-api.md') %>"
 
-- 'Get the template':
-    _slug: 'get-template'
-    name: Get the template
-    category: web-designer
-    content: "<%= inject('doc_pages/en/web-designer/get-template.md') %>"
-
 - 'File structure':
     _slug: 'file-structure'
     name: File structure
