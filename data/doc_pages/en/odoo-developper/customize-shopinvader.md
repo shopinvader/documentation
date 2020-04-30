@@ -23,7 +23,8 @@ You just need Odoo, if you absolutly want to develop with wagon you really reall
 # Modify sale service (read information)
 
 Imaging that you want to show an extra information on you sale order (like the state of manufacturing, the hour/date for retrieving your package...).
-For the exercice we are going to add the field "custom_field" on the sale order and add it into the API
+
+For the exercice we are going to add the field "custom_field" (a char field) on the sale order and add it into the API
 
 ## STEP 1: First create a module for ODOO
 
@@ -100,15 +101,18 @@ class SaleService(Component):
 
 # Modify addresses webservice (read/write information)
 
-Now you know how to modify a webservice let's go futher. We are going to add a new field on the partner and make it editable for the address service
+Now you know how to modify a webservice let's go futher.
+
+We are going to add a new field on the partner and make it editable for the address service
 
 ## STEP 1: Add a test
 
 And yes again we start with the test.
-You need to create two test
+You need to create three test
 
+- one for reading the information throught the webservice
 - one for writing the information throught the webservice
-- one for reading the informatin throught the webservice
+- one for creating an address with this information throught the webservice
 
 ## STEP 2: Add the feature
 
@@ -122,6 +126,18 @@ Now you have a working broken test let's add the feature
 
 On the sale order we are going to add a new method that can be call by the web service
 
+This method will be *custom_action* and will just flag the field *custom_action_done* on the sale order.
+
 ## STEP 1: Add the test
 
+The test should use an existing sale order and call the method *custom_action* by using the dispatch method.
+
+Add an assert to check that the field *custom_action_done* is flag at True
+
+
 ## STEP 2: Add the feature
+
+Now you can edit the sale service and add the *custom_action* method.
+
+Do not forget to add a validator.
+
