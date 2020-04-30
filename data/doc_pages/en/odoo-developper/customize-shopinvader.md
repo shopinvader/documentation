@@ -13,14 +13,12 @@ You just need Odoo, if you absolutly want to develop with wagon you really reall
 <div class="alert alert-warning">
 <p>Tips for testing</p>
 
-<p>Be efficient use pytest : https://github.com/camptocamp/pytest-odoo</p>
+<p>Be efficient use pytest : <a href="https://github.com/camptocamp/pytest-odoo" target="_blank">pytest-odoo</a></p>
 </div>
 
-
-Every step of the following tutorial can be found here : https://github.com/shopinvader/odoo-shopinvader-customize
-
-One step per commit
-
+<div class="alert alert-info">
+<p>Every step of the following tutorial can be found here : <a href="https://github.com/shopinvader/odoo-shopinvader-customize/commits/master" target="_blank">odoo-shopinvader-customize</a></p>
+</div>
 
 # Modify sale service (read information)
 
@@ -37,16 +35,67 @@ If it's the first time that you create an Odoo module please take a look here :
 
 ## STEP 2: Add a test
 
-Writing test for shopinvader is quit is the same as usual you can use the following helper
+Writing test for shopinvader is quit is the same as usual but instead of using the TransactionCase of Odoo we recommend to use the CommonCase from Shopinvader.
 
+
+### CommonCase class
+
+The CommonCase class have some helper to make it simplier to test your service.
+You can import the class like that:
 
 ```
 from odoo.addons.shopinvader.tests.common import CommonCase
+class CustomSaleServiceTest(CommonCase):
+    def test_read_custom_field(self):
+        pass
 ```
 
+### work_on_services helper
 
+This helper, will return you the service wanted
+
+Example
+
+```
+with self.work_on_services() as work:
+    sale_service = work.component(usage="sales")
+    sale_service.dispatch('get', sale_id)
+```
+
+If you want to pass the partner logged on the front
+
+```
+partner = self.env.ref("shopinvader.partner_1")
+with self.work_on_services(partner=partner) as work:
+    sale_service = work.component(usage="sales")
+    sale_service.dispatch('get', sale_id)
+```
+
+### Now it's your turn
+
+Try to build the test, when you think it's ready you can take a look at
+
+Solution at **Modify sale service. STEP 2: Add test**
 
 ## STEP 3: Add the feature
+
+### Modify the models
+
+You need to add the field "custom_fields" into the model *sale.order*
+
+### Modify the service
+
+You need to inherit the method *_convert_one_sale* of the service *shopinvader.sale.service*
+
+Note: service are base on the Component module: [doc](https://odoo-connector.com/api/api_components.html) [code source](https://github.com/OCA/connector)
+
+Inheriting the SaleService can be done like this
+
+```
+from odoo.addons.component.core import Component
+class SaleService(Component):
+    _inherit = "shopinvader.sale.service"
+```
 
 
 # Modify addresses webservice (read/write information)
