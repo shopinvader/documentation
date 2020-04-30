@@ -82,6 +82,35 @@ You should see this like
 docker-compose run --service-port wagon
 ```
 
+### Yarn
+
+Before playing with wagon you need to build your asset.
+If you forget this step the rendering will be broken.
+
+In you terminal inside the template repository
+
+Lauch the following command to install javascript dependency
+
+```
+yarn install
+```
+
+Then you can launch the start command to build and watch change (with auto-rebuild)
+
+```
+yarn start
+```
+
+Or you can build the dev or prod asset
+
+```
+yarn build:dev
+```
+
+```
+yarn build:prod
+```
+
 ### Wagon serve
 
 Let's try to render your website like a webdesigner !

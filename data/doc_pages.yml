@@ -40,12 +40,6 @@
     category: web-designer
     content: "<%= inject('doc_pages/en/web-designer/play-with-the-api.md') %>"
 
-- 'Get the template':
-    _slug: 'get-template'
-    name: Get the template
-    category: web-designer
-    content: "<%= inject('doc_pages/en/web-designer/get-template.md') %>"
-
 - 'File structure':
     _slug: 'file-structure'
     name: File structure
@@ -111,3 +105,9 @@
     name: Odoo PIP installation
     category: odoo-developper
     content: "<%= inject('doc_pages/en/odoo-developper/odoo-pip-installation.md') %>"
+
+- 'Customize Shopinvader':
+    _slug: 'customize-shopinvader'
+    name: Customize Shopinvader
+    category: odoo-developper
+    content: "<%= inject('doc_pages/en/odoo-developper/customize-shopinvader.md') %>"
