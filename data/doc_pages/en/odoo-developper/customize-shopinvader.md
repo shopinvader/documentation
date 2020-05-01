@@ -1,14 +1,15 @@
 # Introduction
 
-In this tutorial you are going to learn how to develop custom feature for shopinvader.
+In this tutorial you are going to learn how to develop a custom feature for shopinvader.
 
 Shopinvader architecture is based on a REST API. The main idea is to be able to develop
-new feature without any frontend template.
-Traditional developement mix the front and the back but this is a bad practice and make slow the developpment (front dev wait for back dev and back dev wait for front dev)
+new features without any frontend template.
+Traditional developement mixes the front- and back-ends. This is a bad practice and slows development speed (for each iteration, the frontend needs the backend to finish development and inversely)
 
-To be efficient for every feature we develop we will start by writting a test !
-So for developping a new feature you do not need to install wagon, locomotive.
-You just need Odoo, if you absolutly want to develop with wagon you really really go in the wrong way, so I will not help you ;).
+You do not need to install wagon and locomotive to start developing.
+You really only need Odoo, and keep in mind that involving other elements of the stack (wagon) is the wrong way to go.
+
+To be efficient in our development, we will start by writing a test !
 
 <div class="alert alert-warning">
 <p>Tips for testing</p>
@@ -22,9 +23,9 @@ You just need Odoo, if you absolutly want to develop with wagon you really reall
 
 # Modify sale service (read information)
 
-Imaging that you want to show an extra information on you sale order (like the state of manufacturing, the hour/date for retrieving your package...).
+Imagine that you want to show extra information on your sale order (like the state of manufacturing, the hour/date for package retrieval...).
 
-For the exercice we are going to add the field "custom_field" (a char field) on the sale order and add it into the API
+For this exercise we are going to add on Sale Orders a custom Char field, named "custom_field". Then we will add it into the API.
 
 ## STEP 1: First create a module for ODOO
 
@@ -36,12 +37,12 @@ If it's the first time that you create an Odoo module please take a look here :
 
 ## STEP 2: Add a test
 
-Writing test for shopinvader is quit is the same as usual but instead of using the TransactionCase of Odoo we recommend to use the CommonCase from Shopinvader.
+Writing a test for shopinvader is the same as writing a standard Odoo test, but instead of using Odoo's TransactionCase we recommend using the CommonCase from Shopinvader.
 
 
 ### CommonCase class
 
-The CommonCase class have some helper to make it simplier to test your service.
+The CommonCase class has some helpers to make it simpler to test your service.
 You can import the class like that:
 
 ```
@@ -53,7 +54,7 @@ class CustomSaleServiceTest(CommonCase):
 
 ### work_on_services helper
 
-This helper, will return you the service wanted
+This helper will return the requested service
 
 Example
 
@@ -63,7 +64,7 @@ with self.work_on_services() as work:
     sale_service.dispatch('get', sale_id)
 ```
 
-If you want to pass the partner logged on the front
+If you want to pass the currently logged in partner from the frontend
 
 ```
 partner = self.env.ref("shopinvader.partner_1")
@@ -80,15 +81,13 @@ Solution at **Modify sale service. STEP 2: Add test**
 
 ## STEP 3: Add the feature
 
-### Modify the models
+### Extend the model Odoo-side
 
-You need to add the field "custom_fields" into the model *sale.order*
+Add the field "custom_fields" to the model *sale.order*
 
-### Modify the service
+### Extend the service
 
 You need to inherit the method *_convert_one_sale* of the service *shopinvader.sale.service*
-
-Note: service are base on the Component module: [doc](https://odoo-connector.com/api/api_components.html) [code source](https://github.com/OCA/connector)
 
 Inheriting the SaleService can be done like this
 
@@ -98,6 +97,7 @@ class SaleService(Component):
     _inherit = "shopinvader.sale.service"
 ```
 
+Note: services are based on the Component module: [doc](https://odoo-connector.com/api/api_components.html) [code source](https://github.com/OCA/connector)
 
 # Modify addresses webservice (read/write information)
 
@@ -107,16 +107,16 @@ We are going to add a new field on the partner and make it editable for the addr
 
 ## STEP 1: Add a test
 
-And yes again we start with the test.
-You need to create three test
+Once more we start with writing the test.
+You need to create three tests
 
-- one for reading the information throught the webservice
-- one for writing the information throught the webservice
-- one for creating an address with this information throught the webservice
+- one for reading the information through the webservice
+- one for writing the information through the webservice
+- one for creating an address with this information through the webservice
 
 ## STEP 2: Add the feature
 
-Now you have a working broken test let's add the feature
+Now you have written a failing test, let's add the features:
 
 - add the field on the model
 - customize the address service
@@ -124,9 +124,9 @@ Now you have a working broken test let's add the feature
 
 # Add a new method on sale service
 
-On the sale order we are going to add a new method that can be call by the web service
+On the sale order we are going to add a new method that can be called by the web service
 
-This method will be *custom_action* and will just flag the field *custom_action_done* on the sale order.
+This method will be *custom_action* and will just switch the current value for the Boolean field *custom_action_done* on the sale order.
 
 ## STEP 1: Add the test
 
