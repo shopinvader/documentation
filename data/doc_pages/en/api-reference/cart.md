@@ -1,6 +1,6 @@
 `store.cart` is the current cart. This variable is only available after the add to cart action. `store.cart` allow cart lines with product data, shipping address, delivery mode, Cart object is stored and managed directly via odoo. 
 
-To avoid performance problems, cart data are cached, each cart updating (add new product, set a shipping address…) refresh cached datas via an Odoo API call.
+To avoid performance problems, cart data are cached, each cart updating (add new product, set a shipping address…) refresh cached data via an Odoo API call.
 
 Each cart update recalculate grand total, subtotal, shipping cost and VAT amount automatically.
 
@@ -19,7 +19,7 @@ Attributes of store.cart object.
 | invoicing  | Objects | Invoice address, see Invoicing doc
 | lines  | Objects | Cart lines See Cart lines documentation
 | name  | String | Cart reference
-| payment | Objects | Payment method avaliable and selected method, see Select payment method doc
+| payment | Objects | Payment method available and selected method, see Select payment method doc
 | promotion_rules_auto  | Objects | 
 | promotion_rule_coupon  | Object | 
 | shipping  | Objects | Shipping address, see Shipping doc
@@ -106,7 +106,7 @@ Payment cart attribute.
 ### [POST] cart/update
 
 Update cart data. This method is used to change shipping or invoicing address, add note, set a new cart step.
-cart step is used to get cart feedback for marchant cart analysis. It's also used to transform a cart into an order after the checkout.
+cart step is used to get cart feedback for merchant cart analysis. It's also used to transform a cart into an order after the checkout.
 
 #### Options
 
@@ -114,8 +114,8 @@ cart step is used to get cart feedback for marchant cart analysis. It's also use
 |--------|--------|-------------|
 | step.current | String | current cart step  |
 | step.next | String | New cart step  |
-| shipping.address.id | Integer | Id of selected shipping address, optionnal value. See Addresses Documentation to get customer addresses list  |
-| invoicing.address.id | Integer | Id of selected invoicing address, optionnal value. See Addresses Documentation to get customer addresses list  |
+| shipping.address.id | Integer | Id of selected shipping address, optional value. See Addresses Documentation to get customer addresses list  |
+| invoicing.address.id | Integer | Id of selected invoicing address, optional value. See Addresses Documentation to get customer addresses list  |
 
 invoicing.address.id and shipping.address.id are not required values.
 

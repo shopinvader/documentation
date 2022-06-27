@@ -1,4 +1,4 @@
-Shopnvader provides some globals object to get an access to e-commerce features. 
+ShopInvader provides some globals object to get an access to e-commerce features. 
 
 
 ## Shopping cart
@@ -8,7 +8,7 @@ This variable is only available after the add to cart action.
 store.cart allow cart lines with product data, shipping address, delivery mode, Cart object is stored and managed directly via odoo. 
 
 
-To avoid performance problems, cart data are cached, each cart updating (add new product, set a shipping address…) refresh cached datas via an Odoo API call.
+To avoid performance problems, cart data are cached, each cart updating (add new product, set a shipping address…) refresh cached data via an Odoo API call.
 
 
 Each cart update recalculate grand total, subtotal, shipping cost and VAT amount automatically.
@@ -20,7 +20,7 @@ It display logged user data. This is an alias of address with profile address ty
 
 Customer is logged via LocomotiveCMS authentication process. Authentication use customer models.
 
-## Customer Adresses
+## Customer Addresses
 
 `store.addresses` provide to you logged user's addresses.
 It is a collection of customer's addresses. This object are only defined when you have a logged customer. 

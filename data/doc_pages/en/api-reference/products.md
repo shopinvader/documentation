@@ -10,7 +10,7 @@ This variable is a collection of product stored in Algolia or Elasticsearch.
 with_scope, paginate liquid tags are available with `store.products`.
 
 
-> In these examples below, *product* variable is an occurence of store.products collection.
+> In these examples below, *product* variable is an occurrence of store.products collection.
 
 ## Product Attributes
 
@@ -61,7 +61,7 @@ Display product model name and variant name.
 
 ### Images
 
-Shopinvader Odoo module can generate images with differents sizes. Image's sizes are set up in backend configuration in Odoo.
+Shopinvader Odoo module can generate images with different sizes. Image's sizes are set up in backend configuration in Odoo.
 
 Image attribute of product’s data is a product’s images collection.
 

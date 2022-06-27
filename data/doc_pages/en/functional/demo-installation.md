@@ -10,7 +10,7 @@ With that project you already have a docker container with
 - an elastic server for indexing your data
 - a docker image with wagon cli inside
 
-In real case your Odoo, Locomotive and Elastic application will be installed on remote server. Wagon is the only required tools for developping a website.
+In real case your Odoo, Locomotive and Elastic application will be installed on remote server. Wagon is the only required tools for developing a website.
 
 
 ## Requirement

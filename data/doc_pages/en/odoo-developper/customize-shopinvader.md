@@ -4,11 +4,11 @@ In this tutorial you are going to learn how to develop custom feature for shopin
 
 Shopinvader architecture is based on a REST API. The main idea is to be able to develop
 new feature without any frontend template.
-Traditional developement mix the front and the back but this is a bad practice and make slow the developpment (front dev wait for back dev and back dev wait for front dev)
+Traditional development mix the front and the back but this is a bad practice and make slow the development (front dev wait for back dev and back dev wait for front dev)
 
-To be efficient for every feature we develop we will start by writting a test !
-So for developping a new feature you do not need to install wagon, locomotive.
-You just need Odoo, if you absolutly want to develop with wagon you really really go in the wrong way, so I will not help you ;).
+To be efficient for every feature we develop we will start by writing a test !
+So for developing a new feature you do not need to install wagon, locomotive.
+You just need Odoo, if you absolutely want to develop with wagon you really really go in the wrong way, so I will not help you ;).
 
 <div class="alert alert-warning">
 <p>Tips for testing</p>
@@ -24,7 +24,7 @@ You just need Odoo, if you absolutly want to develop with wagon you really reall
 
 Imaging that you want to show an extra information on you sale order (like the state of manufacturing, the hour/date for retrieving your package...).
 
-For the exercice we are going to add the field "custom_field" (a char field) on the sale order and add it into the API
+For the exercise we are going to add the field "custom_field" (a char field) on the sale order and add it into the API
 
 ## STEP 1: First create a module for ODOO
 
@@ -41,7 +41,7 @@ Writing test for shopinvader is quit is the same as usual but instead of using t
 
 ### CommonCase class
 
-The CommonCase class have some helper to make it simplier to test your service.
+The CommonCase class have some helper to make it simpler to test your service.
 You can import the class like that:
 
 ```
@@ -101,7 +101,7 @@ class SaleService(Component):
 
 # Modify addresses webservice (read/write information)
 
-Now you know how to modify a webservice let's go futher.
+Now you know how to modify a webservice let's go further.
 
 We are going to add a new field on the partner and make it editable for the address service
 
@@ -110,9 +110,9 @@ We are going to add a new field on the partner and make it editable for the addr
 And yes again we start with the test.
 You need to create three test
 
-- one for reading the information throught the webservice
-- one for writing the information throught the webservice
-- one for creating an address with this information throught the webservice
+- one for reading the information through the webservice
+- one for writing the information through the webservice
+- one for creating an address with this information through the webservice
 
 ## STEP 2: Add the feature
 
