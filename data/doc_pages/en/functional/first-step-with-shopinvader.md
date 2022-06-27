@@ -11,7 +11,7 @@ Go to `Shopinvader` menu and open the `Demo Shopinvader Website`
 <img src="/samples/functional-training/odoo-config-step-1.png" width="400" hight="400">
 
 
-Go in the tab `developper` and click on `Reset site settings`
+Go in the tab `developer` and click on `Reset site settings`
 
 <img src="/samples/functional-training/odoo-config-step-2.png" width="400" hight="400">
 

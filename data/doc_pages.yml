@@ -103,11 +103,11 @@
 - 'Odoo pip installation':
     _slug: 'odoo-pip-installation'
     name: Odoo PIP installation
-    category: odoo-developper
-    content: "<%= inject('doc_pages/en/odoo-developper/odoo-pip-installation.md') %>"
+    category: odoo-developer
+    content: "<%= inject('doc_pages/en/odoo-developer/odoo-pip-installation.md') %>"
 
 - 'Customize Shopinvader':
     _slug: 'customize-shopinvader'
     name: Customize Shopinvader
-    category: odoo-developper
-    content: "<%= inject('doc_pages/en/odoo-developper/customize-shopinvader.md') %>"
+    category: odoo-developer
+    content: "<%= inject('doc_pages/en/odoo-developer/customize-shopinvader.md') %>"

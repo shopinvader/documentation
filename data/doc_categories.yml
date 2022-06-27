@@ -10,9 +10,9 @@
     _slug: "web-designer"
     name: "Web designer"
 
-- "Odoo Developper":
-    _slug: "odoo-developper"
-    name: "Odoo Developper"
+- "Odoo Developer":
+    _slug: "odoo-developer"
+    name: "Odoo Developer"
 
 - "API References":
     _slug: "api"
