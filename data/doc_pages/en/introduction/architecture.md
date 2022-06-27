@@ -57,8 +57,8 @@ All components communicate between them as follows:
 
 - Odoo push configuration to Locomotive.
 
-- Odoo push products and categories to the seach engine (Algolia/Elasticsearch).
+- Odoo push products and categories to the search engine (Algolia/Elasticsearch).
 
 - Locomotive fetch from the search engine products and categories.
 
-- Locomotive push and fetch from Odoo carts and other customer informations.
+- Locomotive push and fetch from Odoo carts and other customer information.

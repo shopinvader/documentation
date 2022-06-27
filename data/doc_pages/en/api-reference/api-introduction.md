@@ -17,16 +17,16 @@ Using the Shopinvader Storefront API, you can:
 
 Product and categories data are not provided directly by the REST API. These data are fetched via Elasticsearch API instead of the REST API.
 This is quite an interesting specificity to avoid overloading Odoo when someone only wants to display products pages or categories pages.
-Elasticsearch indexes are feeded by Odoo with product and categories data. 
+Elasticsearch indexes are fed by Odoo with product and categories data. 
 
 
  > **Caution** 
  > Storefront API is an authenticated API.
  
 
-### API Authentification
+### API Authentication
 
-REST API requiere authentication with an API Key. API credentials are defined in Odoo.
+REST API requires authentication with an API Key. API credentials are defined in Odoo.
 To define the REST API credentials, go on the Shopinvader section in Odoo, select your Shopinvader Website and define new values in the Credentials tab.
 
 
@@ -39,10 +39,10 @@ Shopinvader provides the flexibility to call by using :
 #### Using HTTP REQUEST
 
 For external apps, you can access to API method with simple HTTP request. External API call requires an authentications.
-See API Authentification doc. REST uses four different HTTP 1.1 verbs (GET, POST, DELETE, PUT) to perform tasks.
+See API Authentication doc. REST uses four different HTTP 1.1 verbs (GET, POST, DELETE, PUT) to perform tasks.
 
 **API Entry Point:** *< your-odoo-url >*/shopinvader/
-To perform the authentification add API-KEY header params with api key value
+To perform the Authentication add API-KEY header params with api key value
 
 
 ##### Example
@@ -62,7 +62,7 @@ This example runs an HTTP request to add a new product in the cart:
 Shopinvader provides other way to run API call thanks to using HTML Form on your storefront template. 
 
 This method gives you control on API via a simple HTML Form in order to simplify API request on your shopinvader template. 
-API Entry Point and API authentification is automaticaly filled when you make an API request via an HTML form thanks to credentials defined in site configuration.
+API Entry Point and API authentication is automatically filled when you make an API request via an HTML form thanks to credentials defined in site configuration.
 
 HTML form submission calls an API method and makes a redirection in order to get the API response status.
 

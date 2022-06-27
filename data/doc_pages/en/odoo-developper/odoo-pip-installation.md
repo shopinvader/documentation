@@ -1,6 +1,6 @@
 ## Alternative installation methods
 
-If you wish to install odoo separataly from a docker image you can do so following the following instructions:
+If you wish to install odoo separately from a docker image you can do so following the following instructions:
 
 **Please note that Shopinvader can be setup and hosted by [Acsone](https://www.acsone.eu/page/homepage) or [Akretion](https://akretion.com/en)!**
 
@@ -53,13 +53,13 @@ server_wide_modules = web,queue_job
 channels = root:2
 ```
 
-#### Avanced Installation
+#### Advanced Installation
 If you wish to install Shopinvader in your own Odoo installation, here is a list of the repos and modules you should install:
 
 - Odoo-Shopinvader-Payment(branch 12.0): [https://github.com/shopinvader/odoo-shopinvader-payment](https://github.com/shopinvader/odoo-shopinvader-payment)
 	- shopinvader_payment_manual
-	- (optionnal) shopinvader-payment-stripe
-	- (optionnal) shopinvader-payment-sips
+	- (optional) shopinvader-payment-stripe
+	- (optional) shopinvader-payment-sips
 
 - Odoo-Shopinvader (branch 12.0): [https://github.com/shopinvader/odoo-shopinvader](https://github.com/shopinvader/odoo-shopinvader)
 	- shopinvader_elasticsearch

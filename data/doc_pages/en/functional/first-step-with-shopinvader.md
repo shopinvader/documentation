@@ -88,7 +88,7 @@ Go to the website
 
 Go to Odoo
 
-- You see the checkout step complet by the customer
+- You see the checkout step completed by the customer
 
 <img src="/samples/functional-training/odoo-cart.png" width="400" hight="400">
 
@@ -118,13 +118,13 @@ Go to your website
 - check the change on your website account
 
 
-### Product synchronisation
+### Product synchronization
 
-By default binded products and categories are synchronised every 24 hours with the search engine.
+By default bound products and categories are synchronized every 24 hours with the search engine.
 
 But you can force the export manually.
 
-So keep in mind when you change a product it is not immediatly exported.
+So keep in mind when you change a product it is not immediately exported.
 
 For exporting a product 2 step will be applied
 
@@ -152,7 +152,7 @@ Take a look to `Shopinvader > Variant` and group by state.
 
 #### Exporting the data
 
-A cron is running every X time to generate a bacth export job.
+A cron is running every X time to generate a batch export job.
 
 Go to `Setting > Technical > Automation > Scheduled Action`
 
@@ -175,7 +175,7 @@ Try to
 
 #### Tips
 
-When developping it's cool to sometime force, the export, re-synchronize the data between a corrupted index, dropping the data of the index...
+When developing it's cool to sometime force, the export, re-synchronize the data between a corrupted index, dropping the data of the index...
 
 For that you have some special action accessible from the shopinvader menu
 
